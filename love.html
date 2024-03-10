@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Date Parimala</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #ff8c00, #ff4500);
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .love-emoji-corner {
+            position: absolute;
+            font-size: 36px;
+            z-index: -1;
+        }
+
+        .top-left { top: 0; left: 0; }
+        .top-right { top: 0; right: 0; }
+        .bottom-left { bottom: 0; left: 0; }
+        .bottom-right { bottom: 0; right: 0; }
+
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: darkorange;
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-bottom:  50px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .box {
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            font-size: 24px;
+            margin-bottom: 30px; /* Increased space between icons */
+            border-radius: 50%;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            border: 2px solid #fff;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .pros-box {
+            background: #4caf50; /* Green color */
+        }
+
+        .cons-box {
+            background: #ff4500; /* Red color */
+        }
+
+        .icon-container {
+            display: flex;
+            justify-content: space-between;
+            width: 500px;
+            margin-bottom: 20px;
+        }
+
+        .icon {
+            font-size: 36px;
+            margin-right: 10px;
+        }
+
+        .content {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            z-index: 1;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            color: #fff;
+            font-size: 20px;
+        }
+
+        .next-page-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .next-page-link a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 20px;
+            background-color: #4caf50; /* Green color */
+            transition: background-color 0.3s ease;
+        }
+
+        .next-page-link a:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+
+        /* Animation */
+        .box:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+<!-- Love Emojis Corners -->
+<div class="love-emoji-corner top-left">❤️</div>
+<div class="love-emoji-corner top-right">❤️</div>
+<div class="love-emoji-corner bottom-left">❤️</div>
+<div class="love-emoji-corner bottom-right">❤️</div>
+
+<!-- Header -->
+<div class="header">
+    Let's now dig deep on why to date Parimala
+</div>
+
+<!-- Icons container -->
+<div class="icon-container">
+    <div class="box pros-box" onclick="toggleContent('pros')">PRO</div>
+    <div class="box cons-box" onclick="toggleContent('cons')">CON</div>
+</div>
+
+<!-- Content containers for Pros and Cons -->
+<div id="pros-content" class="content">
+    <span class="close-btn" onclick="toggleContent('pros')">X</span>
+    
+    <ul>
+	Cute and sexy as hell<br>
+        Always gazing at you with adorability<br>
+        Crazy to a decent level<br>
+        Would groove to any song you play<br>
+        Might not disturb you; I'd be sleeping for most parts<br>
+        Black belt in cuddling<br>
+        Working on mastering patience<br>
+        Always energized to listen to your endless stories<br>
+        Might surprise you with delicious food<br>
+        Easy to convince with just a kiss<br>
+        Fluent in the language of love<br>
+        The list gonna overflow.................
+    </ul>
+</div>
+
+<div id="cons-content" class="content">
+    <span class="close-btn" onclick="toggleContent('cons')">X</span>
+    <h2 style="margin-bottom: 20px;">Weakness for Greek God's KISS</h2>
+</div>
+
+<!-- Next page link -->
+<div class="next-page-link">
+    <a href="last.html">Click here to know more!</a>
+
+</div>
+
+<!-- Script to toggle content visibility -->
+<script>
+    function toggleContent(box) {
+        var prosContent = document.getElementById('pros-content');
+        var consContent = document.getElementById('cons-content');
+
+        if (box === 'pros') {
+            prosContent.style.display = prosContent.style.display === 'none' ? 'block' : 'none';
+            consContent.style.display = 'none';
+        } else if (box === 'cons') {
+            consContent.style.display = consContent.style.display === 'none' ? 'block' : 'none';
+            prosContent.style.display = 'none';
+        }
+    }
+</script>
+
+</body>
+</html>
+

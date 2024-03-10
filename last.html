@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Plans</title>
+    <style>
+        body {
+            background: linear-gradient(#000 1px, transparent 1px),
+                        linear-gradient(to right, #000 1px, transparent 1px),
+                        #000; /* Set background color to black for the night sky */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            overflow: hidden;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            color: darkorange;
+        }
+
+        img {
+            max-width: 20%;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        .navigation-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .navigation-link a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 20px;
+            background-color: #4caf50; /* Green color */
+            transition: background-color 0.3s ease;
+        }
+
+        .navigation-link a:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+
+        .stars {
+            position: absolute;
+            width: 4px; /* Adjust the width to make the stars larger */
+            height: 4px; /* Adjust the height to make the stars larger */
+            background-color: #fff; /* Set star color to white */
+            border-radius: 50%; /* Make the stars appear more solid */
+            animation: twinkle 2s infinite; /* Add twinkle animation with a longer duration */
+        }
+
+        @keyframes twinkle {
+            0%, 20%, 50%, 80%, 100% {
+                opacity: 0.2; /* Set lower opacity for dimming effect */
+            }
+            40%, 60% {
+                opacity: 1; /* Set higher opacity for shining effect */
+            }
+        }
+    </style>
+
+    <!-- Script to create twinkling stars -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const numStars = 100;
+            const container = document.body;
+
+            for (let i = 0; i < numStars; i++) {
+                const star = document.createElement("div");
+                star.className = "stars";
+                star.style.left = `${Math.random() * 100}vw`;
+                star.style.top = `${Math.random() * 100}vh`;
+                container.appendChild(star);
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <h1>Well, since you want to know more...</h1>
+    <p>Dating is fun!! No questions on that. Now look at the Scary Long term Options!!!</p>
+    <p>I actually planned to get a Crocodile and leave it in front of your house. But the Crocodile was not willing to come due to our climate. It wanted to stay warm as hell like me. "No means No", be it human or crocodile. All I could get is him. Be a little scared; else, he might feel a little happy!!!</p>
+    <img src="croc.jpg" alt="Description of the image">
+
+    <p>Anyhow, do let me know what you decide, and that answer better be "Hey, I am planning how to propose you. Let me know which place might work for you."</p>
+    <p>If you ask me what I want to do with you, I would always say - Let's FIGHT, FIX, and STAY.</p>
+    <p>PS: Don't judge my coding skills!!! More focus on the EFFORT😉</p>
+
+    <!-- Navigation Link -->
+    <div class="navigation-link">
+        <a href="star2.html">Let's discuss our Date Plans</a>
+    </div>
+</body>
+
+</html>
+

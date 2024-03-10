@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starry Night Proposal</title>
+    <style>
+        body {
+            background: linear-gradient(#000 1px, transparent 1px),
+                        linear-gradient(to right, #000 1px, transparent 1px),
+                        #000;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            overflow: hidden;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .stars {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background-color: #fff;
+            border-radius: 50%;
+            animation: twinkle 2s infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 20%, 50%, 80%, 100% {
+                opacity: 0.2;
+            }
+            40%, 60% {
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            color: gold;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .text {
+            max-width: 800px;
+            font-size: 18px;
+            line-height: 1.5;
+            margin: 20px auto;
+        }
+
+        .next-question {
+            margin-top: 30px;
+            cursor: pointer;
+            color: #fff;
+            text-decoration: underline;
+            font-size: 16px;
+        }
+
+        .next-question:hover {
+            color: gold;
+        }
+    </style>
+
+    <!-- Script to create twinkling stars -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const numStars = 100;
+            const container = document.body;
+
+            for (let i = 0; i < numStars; i++) {
+                const star = document.createElement("div");
+                star.className = "stars";
+                star.style.left = `${Math.random() * 100}vw`;
+                star.style.top = `${Math.random() * 100}vh`;
+                container.appendChild(star);
+            }
+        });
+    </script>
+</head>
+
+<body>
+    
+    <div class="text">
+        Essentially, what I'm trying to express is my desire to explore all that the world has to offer with you and share countless adventures, challenges, and joys together. Let's create a lifetime of memories, embracing every moment and building a story that's uniquely ours.
+    </div>
+    <div class="next-question" onclick="window.location.href='star1.html'">NOW THE REAL QUESTION?</div>
+</body>
+
+</html>

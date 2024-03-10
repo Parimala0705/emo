@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Parimala Details</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow: hidden;
+            background-color: #000; /* Set background color to black for the night sky */
+        }
+
+        .stars {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background-color: transparent;
+            box-shadow: 0 0 2px #fff;
+            animation: twinkle 2s infinite; /* Increase the duration for a slower twinkle effect */
+        }
+
+        @keyframes twinkle {
+            0%, 20%, 50%, 80%, 100% {
+                opacity: 0.2; /* Set lower opacity for dimming effect */
+            }
+            40%, 60% {
+                opacity: 1; /* Set higher opacity for shining effect */
+            }
+        }
+
+        h1 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .emoji {
+            font-size: 30px;
+            margin: 20px 0;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 20px;
+            background-color: #4caf50; /* Green color */
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Night sky with dimming and shining stars -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const numStars = 100;
+            const container = document.body;
+
+            for (let i = 0; i < numStars; i++) {
+                const star = document.createElement("div");
+                star.className = "stars";
+                star.style.left = `${Math.random() * 100}vw`;
+                star.style.top = `${Math.random() * 100}vh`;
+                container.appendChild(star);
+            }
+        });
+    </script>
+
+    <h1>Good! Thank you for trusting me.</h1>
+    <p>I know it's very hard for you to be a living Greek God!!</p>
+    <p>You've got to hustle with your work, gym, friends, music, and travel.</p>
+    <p>Don't you want a wonderful other being to look at you as cutely as possible while you do all that! 🌟</p>
+    <p>I am not referring to cute puppies and cats. BUT INDEED ME. 🐊</p>
+    <p>Want to know further details? <a href="love.html">Click here</a>.</p>
+
+</body>
+</html>
+
+
